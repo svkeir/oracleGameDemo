@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+        
+    <head>
+        <meta charset="UTF-8">
+        <title>Cloudland - The Oracle</title>
+        <link rel="icon" type="image/x-icon" href="../../../assets/svgs/eyeball2.svg">
+        <link rel="stylesheet" href="../../../style.css">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="Stephanie Keir">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <script type="text/JavaScript">	
+        //Script courtesy of BoogieJack.com
+        var message="NoRightClicking";
+        function defeatIE() {if (document.all) {(message);return false;}}
+        function defeatNS(e) {if 
+        (document.layers||(document.getElementById&&!document.all)) {
+        if (e.which==2||e.which==3) {(message);return false;}}}
+        if (document.layers) 
+        {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=defeatNS;}
+        else{document.onmouseup=defeatNS;document.oncontextmenu=defeatIE;}
+        document.oncontextmenu=new Function("return false")
+        </script>
+
+    
+
+        <style>
+            body {
+                height: 100vh;
+                overflow: hidden;
+                background-color: #0f0026;
+            }
+
+            #container {
+                display: flex; 
+                margin-top: 3vh;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            #displayImg {
+                display: flex;
+                justify-content: space-around;
+                gap: 30px;
+                z-index: 5;               
+            }
+
+            #displayImg img {
+                width: 270px;
+                margin-top: 40px;
+                margin-bottom: 10px;
+                border: solid #5c44d3 1px;
+                border-radius: 15px;
+                transition-duration: 1s;              
+            }
+
+            #displayImg img:hover {
+                scale: 1.05;
+                border:  solid #ff5ac4 3px;
+                transition-duration: 1s;
+            }
+
+            p {
+                color: #ff5ac4;
+            }
+
+            .hand1, .hand2 {
+                position: absolute;
+                
+                height: 55vh;
+                bottom: 50px;
+                z-index: 1;
+                pointer-events: none;
+
+            }
+            .hand1 {    
+                left: 70px;
+            }
+            .hand2 {   
+                right: 50px;
+            }`
+
+            .bgcloud {
+                position: absolute;
+                width: 100vw;
+                z-index: -3;
+                bottom: 0;
+                pointer-events: none;
+            }
+            .message {
+                max-width: 580px;
+                text-wrap: wrap;
+            }
+            #reset {
+                display: block;
+                margin: 0 auto;
+                color: white;
+                background-color: #5c44d3;
+                border: none;
+                border-radius: 3.5px;
+                padding: 6px 10px;
+                font-size: 16px;
+                z-index: 12;
+            }
+
+            .resetDisplay {
+                opacity: 0;
+
+            }
+
+        </style>
+
+        
+    </head>	
+        
+    <body>
+        <div id="container" style="height: 100vh;">
+            <div id="display">
+                <div id="displayImg">
+                    <div id="displayImg1"></div>
+                    <div id="displayImg2"></div>
+                </div>
+                <div id="displayName">
+                </div>
+                <div class="message" id="displayDescription1" class="description">
+                </div>
+                  <div class="message" id="displayDescription2" class="description">
+                </div>
+                
+                <button id="reset" class="resetDisplay">Shuffle</button>
+            </div>
+            
+        </div>
+        <script src="oracle.js"></script>
+
+
+        <img class="hand1 float" src="../../../assets/garden/oracle/hand1.svg">
+        <img class="hand2 float" src="../../../assets/garden/oracle/hand2.svg">
+
+        <img class="bgcloud" src="../../../assets/garden/oracle/cloudbg.svg">
+      
+
+        <star-bg></star-bg>>
+        <script src="../../../components/stars.js"></script>
+        
+
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../animations.js"></script> 
+
+      
+
+    </body>
+</html>
