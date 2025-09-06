@@ -121,6 +121,9 @@ document.getElementById("displayImg1").onclick
 
     document.getElementById('displayImg1').style.pointerEvents = 'none';
 
+    document.getElementById("displayName").innerHTML 
+    = '';
+
 
 };
 
