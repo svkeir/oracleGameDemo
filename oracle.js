@@ -81,18 +81,27 @@ function getRandom2(num){
   return randomNumber2;
 }
 
+
+
 document.getElementById("displayImg").onload
 {
+    document.getElementById("displayName").innerHTML 
+    = '<h4 style="text-align:center;">Click the cards to Draw</h4>';
+    
     document.getElementById("displayImg1").innerHTML 
     = '<img src="imgs/cards/cardBack.png">';
     
      document.getElementById("displayImg2").innerHTML 
     = '<img src="imgs/cards/cardBack.png">';
-
-    document.getElementById("displayName").innerHTML 
-    = '<h4 style="text-align:center;">Click the cards to Draw</h4>';
    
 };
+
+
+const oracleClown = document.querySelector("#oracleClown");
+
+oracleClown.addEventListener("click", () => {
+    oracleClown.classList.toggle("hide");
+});
 
 
 document.getElementById("displayImg1").onclick
@@ -103,10 +112,6 @@ document.getElementById("displayImg1").onclick
     document.getElementById("displayImg1").innerHTML 
     = '<img src="imgs/cards/' + 
     currentCard.image + '.png">';
-
-    document.getElementById("displayName").innerHTML 
-    = '<h4>' +
-    currentCard.name + '</h4>';
 
      document.getElementById("displayDescription1").innerHTML 
     = '<p>' +
@@ -128,9 +133,6 @@ document.getElementById("displayImg2").onclick
     = '<img src="imgs/cards/' + 
     currentCard.image + '.png">';
 
-    document.getElementById("displayName").innerHTML 
-    = '<h4>' +
-    currentCard.name + '</h4>';
 
      document.getElementById("displayDescription2").innerHTML 
     = '<p>' +
