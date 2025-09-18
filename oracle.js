@@ -77,7 +77,7 @@ function getRandom2(num){
 
   do {
     Math.floor(Math.random() * num);
-  } while (getRandom() === randomNumber2);
+  } while (randomNumber === randomNumber2);
 
   return randomNumber2;
 }
