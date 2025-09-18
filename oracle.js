@@ -69,6 +69,8 @@ function getRandom(num){
     Math.floor(Math.random() * num);
     return randomNumber;
 }
+let randomNumber = getRandom(30);
+console.log(randomNumber);
 
 function getRandom2(num){
     var randomNumber2 = 
@@ -81,6 +83,8 @@ function getRandom2(num){
   return randomNumber2;
 }
 
+let randomNumber2 = getRandom2(30);
+console.log(randomNumber2);
 
 
 document.getElementById("displayImg").onload
@@ -106,7 +110,7 @@ oracleClown.addEventListener("click", () => {
 
 document.getElementById("displayImg1").onclick
     = function(){
-    var index = getRandom(30);
+    var index = randomNumber;
     var currentCard = deck[index];
 
     document.getElementById("displayImg1").innerHTML 
@@ -129,7 +133,7 @@ document.getElementById("displayImg1").onclick
 
 document.getElementById("displayImg2").onclick
     = function(){
-    var index = getRandom2(30);
+    var index = randomNumber2;
     var currentCard = deck[index];
 
     document.getElementById("displayImg2").innerHTML 
