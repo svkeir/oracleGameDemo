@@ -69,8 +69,7 @@ function getRandom(num){
     Math.floor(Math.random() * num);
     return randomNumber;
 }
-let randomNumber = getRandom(30);
-console.log(randomNumber);
+
 
 function getRandom2(num){
     var randomNumber2 = 
@@ -83,8 +82,8 @@ function getRandom2(num){
   return randomNumber2;
 }
 
+let randomNumber = getRandom(30);
 let randomNumber2 = getRandom2(30);
-console.log(randomNumber2);
 
 
 document.getElementById("displayImg").onload
@@ -97,6 +96,8 @@ document.getElementById("displayImg").onload
     
      document.getElementById("displayImg2").innerHTML 
     = '<img src="imgs/cards/cardBack.png">';
+
+
    
 };
 
@@ -110,6 +111,8 @@ oracleClown.addEventListener("click", () => {
 
 document.getElementById("displayImg1").onclick
     = function(){
+   
+ 
     var index = randomNumber;
     var currentCard = deck[index];
 
@@ -133,6 +136,7 @@ document.getElementById("displayImg1").onclick
 
 document.getElementById("displayImg2").onclick
     = function(){
+
     var index = randomNumber2;
     var currentCard = deck[index];
 
@@ -151,25 +155,31 @@ document.getElementById("displayImg2").onclick
 
 const resetBtn = document.querySelector("#reset");
 
-function resetPage(){
-    document.getElementById("displayImg1").innerHTML 
-    = '<img src="imgs/cards/cardBack.png">';
+// function resetPage(){
+//     // document.getElementById("displayImg1").innerHTML 
+//     // = '<img src="imgs/cards/cardBack.png">';
     
-     document.getElementById("displayImg2").innerHTML 
-    = '<img src="imgs/cards/cardBack.png">';
+//     //  document.getElementById("displayImg2").innerHTML 
+//     // = '<img src="imgs/cards/cardBack.png">';
 
-    document.getElementById("displayName").innerHTML 
-    = '<h4 style="text-align:center;">Click the cards to Draw</h4>';
+//     // document.getElementById("displayName").innerHTML 
+//     // = '<h4 style="text-align:center;">Click the cards to Draw</h4>';
 
-    document.getElementById("displayDescription1").innerHTML = "";
+//     // document.getElementById("displayDescription1").innerHTML = "";
 
-    document.getElementById("displayDescription2").innerHTML = "";
+//     // document.getElementById("displayDescription2").innerHTML = "";
 
-    document.getElementById('displayImg1').style.pointerEvents = 'auto';
-    document.getElementById('displayImg2').style.pointerEvents = 'auto';  
+//     // document.getElementById('displayImg1').style.pointerEvents = 'auto';
+//     // document.getElementById('displayImg2').style.pointerEvents = 'auto';
+
+//     window.location.reload();
     
-    resetBtn.classList.toggle("resetDisplay");
+    
+//     resetBtn.classList.toggle("resetDisplay");
 
-}
+// }
 
-resetBtn.addEventListener("click", resetPage);
+resetBtn.addEventListener('click', function() {
+        window.location.reload();
+    });
+
